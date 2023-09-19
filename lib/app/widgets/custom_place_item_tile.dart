@@ -14,6 +14,9 @@ class CustomPlaceItemTile extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(bottom: 16),
       child: ListTile(
+        onTap: () {
+          debugPrint('Place ${place.title} is tapped');
+        },
         leading: Container(
           width: 70,
           height: 70,
