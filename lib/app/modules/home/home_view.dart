@@ -92,7 +92,7 @@ class HomeView extends StatelessWidget {
 
   Widget _buildPlaceListItem(double maxHeight) {
     return SizedBox(
-      height: maxHeight,
+      height: maxHeight / 3,
       child: ListView.builder(
         itemCount: placesNew.length,
         itemBuilder: (context, index) =>
