@@ -1,3 +1,4 @@
+import 'package:airplane_app/app/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
 import '../../themes/colors.dart';
@@ -13,6 +14,7 @@ class DetailView extends StatelessWidget {
     final maxWidth = MediaQuery.of(context).size.width;
     final maxHeight = MediaQuery.of(context).size.height;
     return Scaffold(
+      bottomNavigationBar: _buildBottomNavbar(maxHeight, maxWidth),
       body: SafeArea(
         child: Column(
           children: [
@@ -49,6 +51,47 @@ class DetailView extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _buildBottomNavbar(double maxHeight, double maxWidth) {
+    return Container(
+      height: maxHeight / 10,
+      color: whiteColor,
+      padding: const EdgeInsetsDirectional.symmetric(
+          horizontal: marginLarge, vertical: marginMedium),
+      child: Row(
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'IDR 30.000',
+                style: poppinsMedium.copyWith(fontSize: 18),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              Text(
+                'per orang',
+                style: poppinsLight,
+              ),
+            ],
+          ),
+          const Spacer(),
+          CustomRoundedButton(
+            text: 'Book Now',
+            onTap: () {
+              debugPrint('Book Now');
+            },
+            width: maxWidth / 2.5,
+            height: 55,
+            color: primaryColor,
+            isShadow: false,
+            textColor: whiteColor,
+          ),
+        ],
       ),
     );
   }
