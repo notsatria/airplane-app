@@ -4,6 +4,7 @@ import '../../themes/colors.dart';
 import '../../themes/fonts.dart';
 import '../../themes/sizing.dart';
 import '../../widgets/custom_button.dart';
+import '../home/home_view.dart';
 
 class BonusSaldoView extends StatelessWidget {
   static const route = '/bonus-saldo-view';
@@ -26,7 +27,7 @@ class BonusSaldoView extends StatelessWidget {
               const SizedBox(height: 10),
               _buildSubtitleText(maxWidth),
               SizedBox(height: maxHeight / 15),
-              _buildStartButton(),
+              _buildStartButton(context),
             ],
           ),
         ),
@@ -133,10 +134,11 @@ class BonusSaldoView extends StatelessWidget {
     );
   }
 
-  Widget _buildStartButton() {
+  Widget _buildStartButton(BuildContext context) {
     return CustomRoundedButton(
       text: 'Start Fly Now',
       onTap: () {
+        Navigator.pushReplacementNamed(context, HomeView.route);
         debugPrint('Go To Home');
       },
       width: 220,

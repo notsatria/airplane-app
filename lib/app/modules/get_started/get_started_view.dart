@@ -4,7 +4,7 @@ import '../../themes/colors.dart';
 import '../../themes/fonts.dart';
 import '../../themes/sizing.dart';
 import '../../widgets/custom_button.dart';
-import '../sig_nup/sign_up_view.dart';
+import '../sign_up/sign_up_view.dart';
 
 class GetStartedView extends StatelessWidget {
   static const route = '/get-started';

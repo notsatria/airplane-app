@@ -1,9 +1,10 @@
-import 'app/modules/bonus_saldo/bonus_saldo.view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'app/modules/bonus_saldo/bonus_saldo.view.dart';
 import 'app/modules/get_started/get_started_view.dart';
-import 'app/modules/sig_nup/sign_up_view.dart';
+import 'app/modules/home/home_view.dart';
+import 'app/modules/sign_up/sign_up_view.dart';
 import 'app/modules/splash/splash_view.dart';
 import 'app/themes/colors.dart';
 
@@ -27,6 +28,7 @@ class MainApp extends StatelessWidget {
         GetStartedView.route: (context) => const GetStartedView(),
         SignUpView.route: (context) => const SignUpView(),
         BonusSaldoView.route: (context) => const BonusSaldoView(), 
+        HomeView.route:(context) =>   const HomeView(),
       },
       theme: ThemeData(
         useMaterial3: true,
@@ -42,6 +44,8 @@ class MainApp extends StatelessWidget {
         errorColor: errorColor,
         indicatorColor: primaryColor,
         hintColor: greyColor,
+
+        backgroundColor: backgroundColor,
 
         // default input decoration for textfield
         inputDecorationTheme: const InputDecorationTheme(
