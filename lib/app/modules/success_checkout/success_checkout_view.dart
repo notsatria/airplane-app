@@ -1,10 +1,10 @@
-import 'package:airplane_app/app/modules/home/home_view.dart';
-import 'package:airplane_app/app/themes/fonts.dart';
-import 'package:airplane_app/app/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
 import '../../themes/colors.dart';
+import '../../themes/fonts.dart';
 import '../../themes/sizing.dart';
+import '../../widgets/custom_button.dart';
+import "../home/home_view.dart";
 
 class SuccessCheckoutView extends StatelessWidget {
   static const route = '/success-checkout-view';
