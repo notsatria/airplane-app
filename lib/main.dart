@@ -1,8 +1,9 @@
-import 'app/modules/detail/detail_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'app/modules/bonus_saldo/bonus_saldo.view.dart';
+import 'app/modules/choose_seat/choose_seat_view.dart';
+import 'app/modules/detail/detail_view.dart';
 import 'app/modules/get_started/get_started_view.dart';
 import 'app/modules/home/home_view.dart';
 import 'app/modules/sign_up/sign_up_view.dart';
@@ -28,9 +29,10 @@ class MainApp extends StatelessWidget {
         '/': (context) => const SplashView(),
         GetStartedView.route: (context) => const GetStartedView(),
         SignUpView.route: (context) => const SignUpView(),
-        BonusSaldoView.route: (context) => const BonusSaldoView(), 
-        HomeView.route:(context) =>   const HomeView(),
-        DetailView.route:(context) => const DetailView(),
+        BonusSaldoView.route: (context) => const BonusSaldoView(),
+        HomeView.route: (context) => const HomeView(),
+        DetailView.route: (context) => const DetailView(),
+        ChooseSeatView.route: (context) => const ChooseSeatView(),
       },
       theme: ThemeData(
         useMaterial3: true,
