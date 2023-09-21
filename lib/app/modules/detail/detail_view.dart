@@ -1,9 +1,9 @@
-import 'package:airplane_app/app/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
 import '../../themes/colors.dart';
 import '../../themes/fonts.dart';
 import '../../themes/sizing.dart';
+import '../../widgets/custom_button.dart';
 
 class DetailView extends StatelessWidget {
   static const route = '/detail-view';
