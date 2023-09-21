@@ -1,10 +1,11 @@
-import 'package:airplane_app/app/themes/colors.dart';
-import 'package:airplane_app/app/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
+import '../../themes/colors.dart';
 import '../../themes/fonts.dart';
 import '../../themes/sizing.dart';
+import '../../widgets/custom_button.dart';
 import '../../widgets/custom_seat_container_item.dart';
+import '../checkout/checkout_view.dart';
 
 class ChooseSeatView extends StatefulWidget {
   static const route = '/choose-seat-view';
@@ -42,6 +43,7 @@ class _ChooseSeatViewState extends State<ChooseSeatView> {
                 text: 'Continue to Checkout',
                 onTap: () {
                   debugPrint('Checkout');
+                  Navigator.pushNamed(context, CheckoutView.route);
                 },
                 width: maxWidth,
                 height: 55,
