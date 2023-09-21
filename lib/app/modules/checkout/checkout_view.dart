@@ -1,9 +1,10 @@
-import 'package:airplane_app/app/themes/fonts.dart';
-import 'package:airplane_app/app/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
 import '../../themes/colors.dart';
+import '../../themes/fonts.dart';
 import '../../themes/sizing.dart';
+import '../../widgets/custom_button.dart';
+import '../success_checkout/success_checkout_view.dart';
 
 class CheckoutView extends StatelessWidget {
   static const route = '/checkout-view';
@@ -32,7 +33,7 @@ class CheckoutView extends StatelessWidget {
                 const SizedBox(height: 30),
                 _buildBalanceCard(maxWidth, maxHeight),
                 const SizedBox(height: 30),
-                _buildPayButton(maxWidth),
+                _buildPayButton(maxWidth, context),
                 const SizedBox(height: 30),
                 _buildTnCText(),
               ],
@@ -57,11 +58,12 @@ class CheckoutView extends StatelessWidget {
     );
   }
 
-  CustomRoundedButton _buildPayButton(double maxWidth) {
+  CustomRoundedButton _buildPayButton(double maxWidth, BuildContext context) {
     return CustomRoundedButton(
       text: 'Pay Now',
       onTap: () {
-        debugPrint('Pay Noew');
+        debugPrint('Pay Now');
+        Navigator.pushReplacementNamed(context, SuccessCheckoutView.route);
       },
       width: maxWidth,
       height: 55,
