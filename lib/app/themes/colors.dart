@@ -10,5 +10,5 @@ const Color successColor = Color(0xff0EC3AE);
 
 const Color whiteColor = Color(0xffFFFFFF);
 const Color blackColor = Color(0xFF121212);
-const Color greyColor = Color(0xFF808080);
+const Color greyColor = Color(0xFF9698A9);
 const Color backgroundColor = Color(0xFFFAFAFA);

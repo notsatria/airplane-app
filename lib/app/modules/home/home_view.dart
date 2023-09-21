@@ -1,10 +1,10 @@
-import 'package:airplane_app/app/widgets/custom_place_item_card.dart';
-import 'package:airplane_app/app/widgets/custom_place_item_tile.dart';
 import 'package:flutter/material.dart';
 
 import '../../data/dummies/places.dart';
 import '../../themes/fonts.dart';
 import '../../themes/sizing.dart';
+import '../../widgets/custom_place_item_card.dart';
+import '../../widgets/custom_place_item_tile.dart';
 
 class HomeView extends StatelessWidget {
   static const route = '/home-view';

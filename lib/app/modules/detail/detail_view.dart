@@ -1,9 +1,10 @@
-import 'package:airplane_app/app/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
 import '../../themes/colors.dart';
 import '../../themes/fonts.dart';
 import '../../themes/sizing.dart';
+import '../../widgets/custom_button.dart';
+import '../choose_seat/choose_seat_view.dart';
 
 class DetailView extends StatelessWidget {
   static const route = '/detail-view';
@@ -14,7 +15,7 @@ class DetailView extends StatelessWidget {
     final maxWidth = MediaQuery.of(context).size.width;
     final maxHeight = MediaQuery.of(context).size.height;
     return Scaffold(
-      bottomNavigationBar: _buildBottomNavbar(maxHeight, maxWidth),
+      bottomNavigationBar: _buildBottomNavbar(maxHeight, maxWidth, context),
       body: SafeArea(
         child: Column(
           children: [
@@ -55,7 +56,8 @@ class DetailView extends StatelessWidget {
     );
   }
 
-  Widget _buildBottomNavbar(double maxHeight, double maxWidth) {
+  Widget _buildBottomNavbar(
+      double maxHeight, double maxWidth, BuildContext context) {
     return Container(
       height: maxHeight / 10,
       color: whiteColor,
@@ -84,6 +86,7 @@ class DetailView extends StatelessWidget {
             text: 'Book Now',
             onTap: () {
               debugPrint('Book Now');
+              Navigator.pushNamed(context, ChooseSeatView.route);
             },
             width: maxWidth / 2.5,
             height: 55,
