@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'app/modules/bonus_saldo/bonus_saldo.view.dart';
+import 'app/modules/checkout/checkout_view.dart';
 import 'app/modules/choose_seat/choose_seat_view.dart';
 import 'app/modules/detail/detail_view.dart';
 import 'app/modules/get_started/get_started_view.dart';
@@ -33,6 +34,7 @@ class MainApp extends StatelessWidget {
         HomeView.route: (context) => const HomeView(),
         DetailView.route: (context) => const DetailView(),
         ChooseSeatView.route: (context) => const ChooseSeatView(),
+        CheckoutView.route: (context) => const CheckoutView(),
       },
       theme: ThemeData(
         useMaterial3: true,
@@ -60,8 +62,7 @@ class MainApp extends StatelessWidget {
               width: 2,
             ),
           ),
-        ),
-      ),
+        ),),
     );
   }
 }
