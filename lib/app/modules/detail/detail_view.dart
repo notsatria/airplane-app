@@ -15,6 +15,7 @@ class DetailView extends StatelessWidget {
     final maxWidth = MediaQuery.of(context).size.width;
     final maxHeight = MediaQuery.of(context).size.height;
     return Scaffold(
+      backgroundColor: backgroundColor,
       bottomNavigationBar: _buildBottomNavbar(maxHeight, maxWidth, context),
       body: SafeArea(
         child: Column(

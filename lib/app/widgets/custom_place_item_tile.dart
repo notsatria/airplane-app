@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../data/models/place.dart';
+import '../themes/colors.dart';
 import '../themes/fonts.dart';
 import '../themes/sizing.dart';
 
@@ -13,6 +14,16 @@ class CustomPlaceItemTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(bottom: 16),
+      decoration: BoxDecoration(
+        color: whiteColor,
+        borderRadius: BorderRadius.circular(roundedSmall),
+        boxShadow: const [
+          BoxShadow(
+              color: Color.fromARGB(10, 0, 0, 0),
+              offset: Offset(0, 2),
+              blurRadius: 6)
+        ],
+      ),
       child: ListTile(
         onTap: () {
           debugPrint('Place ${place.title} is tapped');
