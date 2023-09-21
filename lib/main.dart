@@ -9,6 +9,7 @@ import 'app/modules/get_started/get_started_view.dart';
 import 'app/modules/home/home_view.dart';
 import 'app/modules/sign_up/sign_up_view.dart';
 import 'app/modules/splash/splash_view.dart';
+import 'app/modules/success_checkout/success_checkout_view.dart';
 import 'app/themes/colors.dart';
 
 void main() {
@@ -35,6 +36,7 @@ class MainApp extends StatelessWidget {
         DetailView.route: (context) => const DetailView(),
         ChooseSeatView.route: (context) => const ChooseSeatView(),
         CheckoutView.route: (context) => const CheckoutView(),
+        SuccessCheckoutView.route: (context) => const SuccessCheckoutView(),
       },
       theme: ThemeData(
         useMaterial3: true,
