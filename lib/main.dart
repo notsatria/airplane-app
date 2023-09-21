@@ -1,3 +1,4 @@
+import 'app/modules/detail/detail_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -29,6 +30,7 @@ class MainApp extends StatelessWidget {
         SignUpView.route: (context) => const SignUpView(),
         BonusSaldoView.route: (context) => const BonusSaldoView(), 
         HomeView.route:(context) =>   const HomeView(),
+        DetailView.route:(context) => const DetailView(),
       },
       theme: ThemeData(
         useMaterial3: true,
