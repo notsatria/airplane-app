@@ -177,7 +177,7 @@ class DetailView extends StatelessWidget {
         vertical: 30,
       ),
       width: maxWidth,
-      height: maxHeight / 2,
+      height: maxHeight / 3,
       decoration: BoxDecoration(
         color: whiteColor,
         borderRadius: BorderRadius.circular(20),
@@ -201,8 +201,10 @@ class DetailView extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(
-            height: 20,
+          const Expanded(
+            child: SizedBox(
+              height: 20,
+            ),
           ),
           Text(
             'Interest',
@@ -212,38 +214,45 @@ class DetailView extends StatelessWidget {
             height: 6,
           ),
           const Expanded(
+            flex: 2,
             child: Row(
               children: [
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
-                        children: [
-                          Icon(
-                            Icons.verified_outlined,
-                            color: primaryColor,
-                          ),
-                          SizedBox(
-                            width: 6,
-                          ),
-                          Text('Kids Park'),
-                        ],
+                      Expanded(
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.verified_outlined,
+                              color: primaryColor,
+                            ),
+                            SizedBox(
+                              width: 6,
+                            ),
+                            Text('Kids Park'),
+                          ],
+                        ),
                       ),
-                      SizedBox(
-                        height: 10,
+                      Expanded(
+                        child: SizedBox(
+                          height: 10,
+                        ),
                       ),
-                      Row(
-                        children: [
-                          Icon(
-                            Icons.verified_outlined,
-                            color: primaryColor,
-                          ),
-                          SizedBox(
-                            width: 6,
-                          ),
-                          Text('City Museum'),
-                        ],
+                      Expanded(
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.verified_outlined,
+                              color: primaryColor,
+                            ),
+                            SizedBox(
+                              width: 6,
+                            ),
+                            Text('City Museum'),
+                          ],
+                        ),
                       ),
                     ],
                   ),
@@ -255,32 +264,38 @@ class DetailView extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
-                        children: [
-                          Icon(
-                            Icons.verified_outlined,
-                            color: primaryColor,
-                          ),
-                          SizedBox(
-                            width: 6,
-                          ),
-                          Text('Honor Bridge'),
-                        ],
+                      Expanded(
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.verified_outlined,
+                              color: primaryColor,
+                            ),
+                            SizedBox(
+                              width: 6,
+                            ),
+                            Text('Honor Bridge'),
+                          ],
+                        ),
                       ),
-                      SizedBox(
-                        height: 10,
+                      Expanded(
+                        child: SizedBox(
+                          height: 10,
+                        ),
                       ),
-                      Row(
-                        children: [
-                          Icon(
-                            Icons.verified_outlined,
-                            color: primaryColor,
-                          ),
-                          SizedBox(
-                            width: 6,
-                          ),
-                          Text('Central Mall'),
-                        ],
+                      Expanded(
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.verified_outlined,
+                              color: primaryColor,
+                            ),
+                            SizedBox(
+                              width: 6,
+                            ),
+                            Text('Central Mall'),
+                          ],
+                        ),
                       ),
                     ],
                   ),
