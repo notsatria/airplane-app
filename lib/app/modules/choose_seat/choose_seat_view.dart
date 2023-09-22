@@ -7,15 +7,10 @@ import '../../widgets/custom_button.dart';
 import '../../widgets/custom_seat_container_item.dart';
 import '../checkout/checkout_view.dart';
 
-class ChooseSeatView extends StatefulWidget {
+class ChooseSeatView extends StatelessWidget {
   static const route = '/choose-seat-view';
   const ChooseSeatView({super.key});
 
-  @override
-  State<ChooseSeatView> createState() => _ChooseSeatViewState();
-}
-
-class _ChooseSeatViewState extends State<ChooseSeatView> {
   @override
   Widget build(BuildContext context) {
     final maxWidth = MediaQuery.of(context).size.width;
@@ -23,9 +18,9 @@ class _ChooseSeatViewState extends State<ChooseSeatView> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: marginLarge),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          padding: const EdgeInsets.only(
+              left: marginLarge, right: marginLarge, bottom: marginLarge),
+          child: ListView(
             children: [
               _buildAppHeader(maxWidth),
               const SizedBox(
@@ -64,7 +59,7 @@ class _ChooseSeatViewState extends State<ChooseSeatView> {
       child: SizedBox(
         width: maxWidth / 2,
         child: Text(
-          'Select Your Favorite Seat',
+          'Select Your \nFavorite Seat',
           style: poppinsSemiBold.copyWith(fontSize: 24),
         ),
       ),
@@ -124,7 +119,6 @@ class _ChooseSeatViewState extends State<ChooseSeatView> {
   Widget _buildSeatContainer(double maxHeight) {
     return Container(
       padding: const EdgeInsets.all(marginSmall),
-      height: maxHeight / 1.8,
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(18)),
       child: Column(
         children: [

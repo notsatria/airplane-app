@@ -17,7 +17,6 @@ class CustomPlaceItemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final maxWidth = MediaQuery.of(context).size.width;
-    final maxHeight = MediaQuery.of(context).size.height;
     return Padding(
       padding: const EdgeInsets.only(right: marginLarge),
       child: GestureDetector(
@@ -30,30 +29,35 @@ class CustomPlaceItemCard extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  height: maxHeight / 4,
-                  width: maxWidth / 2.3,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(roundedLarge),
-                    image: DecorationImage(
-                      image: AssetImage(place.image),
-                      fit: BoxFit.cover,
+                Expanded(
+                  flex: 5,
+                  child: Container(
+                    width: maxWidth / 2.3,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(roundedLarge),
+                      image: DecorationImage(
+                        image: AssetImage(place.image),
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ),
                 const SizedBox(
                   height: 20,
                 ),
-                Text(
-                  place.title,
-                  style: poppinsMedium.copyWith(fontSize: 18),
+                Expanded(
+                  flex: -1,
+                  child: Text(
+                    place.title,
+                    style: poppinsMedium.copyWith(fontSize: 18),
+                  ),
                 ),
-                const SizedBox(
-                  height: 5,
-                ),
-                Text(
-                  place.subtitle,
-                  style: poppinsLight.copyWith(fontSize: 14),
+                Expanded(
+                  flex: 1,
+                  child: Text(
+                    place.subtitle,
+                    style: poppinsLight.copyWith(fontSize: 14),
+                  ),
                 ),
               ],
             ),

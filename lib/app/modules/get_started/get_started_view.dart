@@ -21,7 +21,10 @@ class GetStartedView extends StatelessWidget {
         height: maxHeight,
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/bg.png'),
+            image: AssetImage(
+              'assets/images/bg.png',
+            ),
+            fit: BoxFit.cover,
           ),
         ),
         child: Column(

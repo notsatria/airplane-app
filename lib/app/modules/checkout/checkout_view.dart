@@ -17,27 +17,25 @@ class CheckoutView extends StatelessWidget {
     return Scaffold(
       backgroundColor: backgroundColor,
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Container(
-            padding: const EdgeInsets.only(
-              right: marginLarge,
-              left: marginLarge,
-              top: 50,
-              bottom: 30,
-            ),
-            child: Column(
-              children: [
-                _buildAppHeader(maxWidth),
-                const SizedBox(height: 30),
-                _buildCheckoutCard(maxWidth, maxHeight),
-                const SizedBox(height: 30),
-                _buildBalanceCard(maxWidth, maxHeight),
-                const SizedBox(height: 30),
-                _buildPayButton(maxWidth, context),
-                const SizedBox(height: 30),
-                _buildTnCText(),
-              ],
-            ),
+        child: Container(
+          padding: const EdgeInsets.only(
+            right: marginLarge,
+            left: marginLarge,
+            top: 50,
+            bottom: 30,
+          ),
+          child: ListView(
+            children: [
+              _buildAppHeader(maxWidth),
+              const SizedBox(height: 30),
+              _buildCheckoutCard(maxWidth, maxHeight),
+              const SizedBox(height: 30),
+              _buildBalanceCard(maxWidth, maxHeight),
+              const SizedBox(height: 30),
+              _buildPayButton(maxWidth, context),
+              const SizedBox(height: 30),
+              _buildTnCText(),
+            ],
           ),
         ),
       ),
@@ -76,7 +74,6 @@ class CheckoutView extends StatelessWidget {
   Container _buildBalanceCard(double maxWidth, double maxHeight) {
     return Container(
       width: maxWidth,
-      height: maxHeight / 5.2,
       padding: const EdgeInsets.all(marginLarge),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(roundedLarge),
@@ -196,7 +193,6 @@ class CheckoutView extends StatelessWidget {
   Container _buildCheckoutCard(double maxWidth, double maxHeight) {
     return Container(
       width: maxWidth,
-      height: maxHeight / 1.9,
       padding: const EdgeInsets.all(marginLarge),
       decoration: BoxDecoration(
           color: whiteColor, borderRadius: BorderRadius.circular(roundedLarge)),

@@ -20,37 +20,39 @@ class SignUpView extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       backgroundColor: backgroundColor,
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(marginLarge),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              _buildTitleText(maxWidth),
-              SizedBox(
-                height: maxHeight / 10,
-              ),
-              _buildFullnameForm(),
-              SizedBox(
-                height: maxHeight / 30,
-              ),
-              _buildEmailAddressForm(),
-              SizedBox(
-                height: maxHeight / 30,
-              ),
-              _buildPasswordForm(),
-              SizedBox(
-                height: maxHeight / 30,
-              ),
-              _buildHobbyForm(),
-              SizedBox(
-                height: maxHeight / 30,
-              ),
-              _buildStartButton(context, maxWidth),
-              SizedBox(
-                height: maxHeight / 10,
-              ),
-              _buildTnCText(),
-            ],
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(marginLarge),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                _buildTitleText(maxWidth),
+                SizedBox(
+                  height: maxHeight / 10,
+                ),
+                _buildFullnameForm(),
+                SizedBox(
+                  height: maxHeight / 30,
+                ),
+                _buildEmailAddressForm(),
+                SizedBox(
+                  height: maxHeight / 30,
+                ),
+                _buildPasswordForm(),
+                SizedBox(
+                  height: maxHeight / 30,
+                ),
+                _buildHobbyForm(),
+                SizedBox(
+                  height: maxHeight / 30,
+                ),
+                _buildStartButton(context, maxWidth),
+                SizedBox(
+                  height: maxHeight / 17,
+                ),
+                _buildTnCText(),
+              ],
+            ),
           ),
         ),
       ),

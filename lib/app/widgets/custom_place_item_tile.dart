@@ -49,23 +49,21 @@ class CustomPlaceItemTile extends StatelessWidget {
           place.subtitle,
           style: poppinsLight.copyWith(fontSize: 14),
         ),
-        trailing: SizedBox(
-          width: 55,
-          child: Row(
-            children: [
-              const Icon(
-                Icons.star,
-                color: Color(0xffFFA235),
-              ),
-              const SizedBox(
-                width: 2,
-              ),
-              Text(
-                place.rating,
-                style: poppinsMedium.copyWith(fontSize: 18),
-              ),
-            ],
-          ),
+        trailing: Wrap(
+          direction: Axis.horizontal,
+          children: [
+            const Icon(
+              Icons.star,
+              color: Color(0xffFFA235),
+            ),
+            const SizedBox(
+              width: 2,
+            ),
+            Text(
+              place.rating,
+              style: poppinsMedium.copyWith(fontSize: 18),
+            ),
+          ],
         ),
       ),
     );
