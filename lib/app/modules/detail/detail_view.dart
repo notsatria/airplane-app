@@ -18,7 +18,7 @@ class DetailView extends StatelessWidget {
       backgroundColor: backgroundColor,
       bottomNavigationBar: _buildBottomNavbar(maxHeight, maxWidth, context),
       body: SafeArea(
-        child: Column(
+        child: ListView(
           children: [
             Stack(
               children: [
@@ -60,7 +60,7 @@ class DetailView extends StatelessWidget {
   Widget _buildBottomNavbar(
       double maxHeight, double maxWidth, BuildContext context) {
     return Container(
-      height: maxHeight / 10,
+      height: maxHeight / 8,
       color: whiteColor,
       padding: const EdgeInsetsDirectional.symmetric(
           horizontal: marginLarge, vertical: marginMedium),
@@ -69,16 +69,17 @@ class DetailView extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                'IDR 30.000',
-                style: poppinsMedium.copyWith(fontSize: 18),
+              Expanded(
+                child: Text(
+                  'IDR 30.000',
+                  style: poppinsMedium.copyWith(fontSize: 18),
+                ),
               ),
-              const SizedBox(
-                height: 5,
-              ),
-              Text(
-                'per orang',
-                style: poppinsLight,
+              Expanded(
+                child: Text(
+                  'per orang',
+                  style: poppinsLight,
+                ),
               ),
             ],
           ),
@@ -171,9 +172,12 @@ class DetailView extends StatelessWidget {
 
   Widget _buildAboutCard(double maxHeight, double maxWidth) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 20,
+        vertical: 30,
+      ),
       width: maxWidth,
-      height: maxHeight / 2.8,
+      height: maxHeight / 2,
       decoration: BoxDecoration(
         color: whiteColor,
         borderRadius: BorderRadius.circular(20),
@@ -188,9 +192,14 @@ class DetailView extends StatelessWidget {
           const SizedBox(
             height: 6,
           ),
-          Text(
-            'Berada di jalur jalan provinsi yang menghubungkan Denpasar Singaraja serta letaknya yang dekat dengan Kebun Raya Eka Karya menjadikan tempat Bali.',
-            style: poppinsRegular.copyWith(height: 2),
+          Expanded(
+            flex: 2,
+            child: Text(
+              'Berada di jalur jalan provinsi yang menghubungkan Denpasar Singaraja serta letaknya yang dekat dengan Kebun Raya Eka Karya menjadikan tempat Bali.',
+              style: poppinsRegular.copyWith(
+                height: 1.6,
+              ),
+            ),
           ),
           const SizedBox(
             height: 20,
@@ -202,76 +211,82 @@ class DetailView extends StatelessWidget {
           const SizedBox(
             height: 6,
           ),
-          const Row(
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
+          const Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Icon(
-                        Icons.verified_outlined,
-                        color: primaryColor,
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.verified_outlined,
+                            color: primaryColor,
+                          ),
+                          SizedBox(
+                            width: 6,
+                          ),
+                          Text('Kids Park'),
+                        ],
                       ),
                       SizedBox(
-                        width: 6,
+                        height: 10,
                       ),
-                      Text('Kids Park'),
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.verified_outlined,
+                            color: primaryColor,
+                          ),
+                          SizedBox(
+                            width: 6,
+                          ),
+                          Text('City Museum'),
+                        ],
+                      ),
                     ],
                   ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Row(
+                ),
+                SizedBox(
+                  width: 30,
+                ),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Icon(
-                        Icons.verified_outlined,
-                        color: primaryColor,
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.verified_outlined,
+                            color: primaryColor,
+                          ),
+                          SizedBox(
+                            width: 6,
+                          ),
+                          Text('Honor Bridge'),
+                        ],
                       ),
                       SizedBox(
-                        width: 6,
+                        height: 10,
                       ),
-                      Text('City Museum'),
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.verified_outlined,
+                            color: primaryColor,
+                          ),
+                          SizedBox(
+                            width: 6,
+                          ),
+                          Text('Central Mall'),
+                        ],
+                      ),
                     ],
                   ),
-                ],
-              ),
-              SizedBox(
-                width: 30,
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.verified_outlined,
-                        color: primaryColor,
-                      ),
-                      SizedBox(
-                        width: 6,
-                      ),
-                      Text('Honor Bridge'),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.verified_outlined,
-                        color: primaryColor,
-                      ),
-                      SizedBox(
-                        width: 6,
-                      ),
-                      Text('Central Mall'),
-                    ],
-                  ),
-                ],
-              ),
-            ],
+                ),
+              ],
+            ),
           ),
         ],
       ),

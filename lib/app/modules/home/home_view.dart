@@ -12,7 +12,6 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final maxWidth = MediaQuery.of(context).size.width;
     final maxHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SafeArea(
@@ -24,7 +23,7 @@ class HomeView extends StatelessWidget {
               const SizedBox(
                 height: 40,
               ),
-              _buildImageCarrousel(maxHeight, maxWidth),
+              _buildImageCarrousel(maxHeight),
               const SizedBox(
                 height: 30,
               ),
@@ -78,9 +77,9 @@ class HomeView extends StatelessWidget {
     );
   }
 
-  Widget _buildImageCarrousel(double maxHeight, double maxWidth) {
+  Widget _buildImageCarrousel(double maxHeight) {
     return SizedBox(
-      height: maxHeight / 3,
+      height: maxHeight / 2.2,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: placesCarrousel.length,
