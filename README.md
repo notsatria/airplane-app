@@ -1,5 +1,4 @@
 
-https://github.com/notsatria/airplane-app/assets/92832439/926bc158-b079-4801-bc33-30ffd9b833a7
 # Flutter Airplane App
 
 You can follow me on Instagram [@damsatriaa](https://www.instagram.com/damsatriaa)
@@ -19,4 +18,4 @@ To build and run this project:
 
  
 [**Overview**]   
-Uploading airplane-app.mp4…
+https://github.com/notsatria/airplane-app/assets/92832439/926bc158-b079-4801-bc33-30ffd9b833a7
