@@ -17,4 +17,4 @@ To build and run this project:
 
  
 [**Overview**]   
-img src='https://github.com/notsatria/airplane-app/assets/92832439/146da6f2-b945-4cea-bd37-be8c94ddf9c6
+https://github.com/notsatria/airplane-app/assets/92832439/146da6f2-b945-4cea-bd37-be8c94ddf9c6
